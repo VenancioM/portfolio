@@ -1,3 +1,11 @@
+#badge-name{
+  color: #ffffff !important;
+}
+
+#badge-issuer{
+  color: #ededed !important;
+}
+
 #fh5co-header,
 .fh5co-cover {
   background-color: transparent;
