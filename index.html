@@ -187,115 +187,280 @@
           <div class="relative"><div class="loader-portfolio-wrap"><div class="loader-portfolio"></div></div> </div>
           <div id="portfolio-single-holder"></div>
 
-          <div class="portfolio-wrapper">
+          <div class="portfolio-wrapper insignias">
 
             <div class="d-flex align-items-center mb-4 gsap-reveal gsap-reveal-filter">
               <h2 class="mr-auto heading-h2"><span class="gsap-reveal">Insignias | <img src="images/credly_white.svg" width="120"></span></h2>
             </div>
-            <div id="posts" class="row gutter-isotope-item">
-              <div class="item branding packaging illustration col-sm-4 col-md-4 col-lg-2 isotope-mb-2 ">
-                <a href="https://www.credly.com/badges/23fc8c54-ffe0-4ebd-a58e-2e080cfbced7/public_url" target="_blank" class="portfolio-item isotope-item gsap-reveal-img">
-                  <img src="images/aws-certified-cloud-practitioner.png" width="150"/>
+            <div id="posts" class="insignias__group insignias__group--aws">
+              <h3 class="insignias__group-title gsap-reveal">AWS</h3>
+              <div class="insignias__grid">
+                <a href="https://www.credly.com/badges/23fc8c54-ffe0-4ebd-a58e-2e080cfbced7/public_url" target="_blank" rel="noopener noreferrer" class="badge-card">
+  
+                  <!-- 1. Máscara que recorta la animación sin afectar el exterior de la tarjeta -->
+                  <div class="badge-card__reveal-mask">
+                    <div class="badge-card__cover"></div>
+                  </div>
+
+                  <!-- 2. Contenido principal envuelto para que inicie oculto (GSAP lo revelará) -->
+                  <div class="badge-card__reveal-content">
+                    <img class="badge-card__img" src="images/aws-certified-cloud-practitioner1.png" width="200" height="200"/>
+                    <p class="badge-card__title">AWS Cloud Practitioner</p>
+                    <p class="badge-card__subtitle">Foundational</p>
+                  </div>
+
+                  <!-- 3. El tap-hint se queda fuera del reveal-content para no ser ocultado -->
+                  <span class="badge-card__tap-hint" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M7 17L17 7M17 7H8M17 7V16"/>
+                    </svg>
+                  </span>
+  
                 </a>
-              </div>
-              <div class="item branding packaging illustration col-sm-4 col-md-4 col-lg-2 isotope-mb-2 ">
-                <a href="https://www.credly.com/badges/f4086f38-732f-46fc-a60f-c5a95d32e586/public_url" target="_blank" class="portfolio-item isotope-item gsap-reveal-img">
-                  <img src="images/aws-re-start-graduate.png" width="150"/>
+                <a href="https://www.credly.com/badges/f4086f38-732f-46fc-a60f-c5a95d32e586/public_url" target="_blank" rel="noopener noreferrer" class="badge-card">
+                  <div class="badge-card__reveal-mask">
+                    <div class="badge-card__cover"></div>
+                  </div>
+                  <div class="badge-card__reveal-content">
+                    <img class="badge-card__img" src="images/aws-re-start-graduate.png" width="200" height="200"/>
+                    <p class="badge-card__title">AWS re/Start</p>
+                    <p class="badge-card__subtitle">Graduate</p>
+                  </div>
+                  <span class="badge-card__tap-hint" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M7 17L17 7M17 7H8M17 7V16"/>
+                    </svg>
+                  </span>
+                </a>
+
+                <a href="https://www.credly.com/badges/947cdcd6-d9de-42d4-9b8f-c870c54dcb81/public_url" target="_blank" rel="noopener noreferrer" class="badge-card">
+                  <div class="badge-card__reveal-mask">
+                    <div class="badge-card__cover"></div>
+                  </div>
+                  <div class="badge-card__reveal-content">
+                    <img class="badge-card__img" src="images/aws-cloud-quest-cloud-practitioner-training-badge.png" width="200" height="200"/>
+                    <p class="badge-card__title">AWS Cloud Quest Cloud Practitioner</p>
+                    <p class="badge-card__subtitle">Trained</p>
+                  </div>
+                  <span class="badge-card__tap-hint" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M7 17L17 7M17 7H8M17 7V16"/>
+                    </svg>
+                  </span>
+                </a>
+
+                <a href="https://www.credly.com/badges/7bc3d871-420b-4af0-a263-38d9d2d2f3b5/public_url" target="_blank" rel="noopener noreferrer" class="badge-card">
+                  <div class="badge-card__reveal-mask">
+                    <div class="badge-card__cover"></div>
+                  </div>
+                  <div class="badge-card__reveal-content">
+                    <img class="badge-card__img" src="images/aws-cloud-quest-generative-ai-practitioner-training.png" width="200" height="200"/>
+                    <p class="badge-card__title">AWS Cloud Quest AI Practitioner</p>
+                    <p class="badge-card__subtitle">Trained</p>
+                  </div>
+                  <span class="badge-card__tap-hint" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M7 17L17 7M17 7H8M17 7V16"/>
+                    </svg>
+                  </span>
+                </a>
+
+                <a href="https://www.credly.com/badges/5baec4a1-8c71-40ab-847d-f9a38938fb92/public_url" target="_blank" rel="noopener noreferrer" class="badge-card">
+                  <div class="badge-card__reveal-mask">
+                    <div class="badge-card__cover"></div>
+                  </div>
+                  <div class="badge-card__reveal-content">
+                    <img class="badge-card__img" src="images/aws_e.png" width="200" height="200"/>
+                    <p class="badge-card__title">AWS Cloud Computing 101</p>
+                    <p class="badge-card__subtitle">Educate</p>
+                  </div>
+                  <span class="badge-card__tap-hint" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M7 17L17 7M17 7H8M17 7V16"/>
+                    </svg>
+                  </span>
                 </a>
               </div>
             </div>
-            <div id="posts" class="row gutter-isotope-item">
-              <div class="item branding packaging illustration col-sm-4 col-md-4 col-lg-2 isotope-mb-2 ">
-                <a href="https://www.credly.com/badges/947cdcd6-d9de-42d4-9b8f-c870c54dcb81/public_url" target="_blank" class="portfolio-item isotope-item gsap-reveal-img">
-                  <img src="images/aws-cloud-quest-cloud-practitioner-training-badge.png" width="150"/>
+            <div class="insignias__group insignias__group--fortinet">
+              <h3 class="insignias__group-title gsap-reveal">Fortinet</h3>
+              <div class="insignias__grid">
+                <a href="https://www.credly.com/badges/3c423772-790f-4dd1-b9c2-f6168947e6d8/public_url" target="_blank" rel="noopener noreferrer" class="badge-card">
+                  <div class="badge-card__reveal-mask">
+                    <div class="badge-card__cover"></div>
+                  </div>
+                  <div class="badge-card__reveal-content">
+                    <img class="badge-card__img" src="images/fortinet-certified-associate-cybersecurity.1.png" width="200" height="200"/>
+                    <p class="badge-card__title">Fortinet Certified Associate</p>
+                    <p class="badge-card__subtitle">Cybersecurity</p>
+                  </div>
+                  <span class="badge-card__tap-hint" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+                  </span>
                 </a>
-              </div>
-              <div class="item branding packaging illustration col-sm-4 col-md-4 col-lg-2 isotope-mb-2 ">
-                <a href="https://www.credly.com/badges/7bc3d871-420b-4af0-a263-38d9d2d2f3b5/public_url" target="_blank" class="portfolio-item isotope-item gsap-reveal-img">
-                  <img src="images/aws-cloud-quest-generative-ai-practitioner-training.png" width="150"/>
+
+                <a href="https://www.credly.com/badges/03e83bc4-ed99-4a52-9691-4993a934f761/public_url" target="_blank" rel="noopener noreferrer" class="badge-card">
+                  <div class="badge-card__reveal-mask">
+                    <div class="badge-card__cover"></div>
+                  </div>
+                  <div class="badge-card__reveal-content">
+                    <img class="badge-card__img" src="images/fortinet-certified-fundamentals-cybersecurity.png" width="200" height="200"/>
+                    <p class="badge-card__title">Fortinet Certified Fundamentals</p>
+                    <p class="badge-card__subtitle">Cybersecurity</p>
+                  </div>
+                  <span class="badge-card__tap-hint" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+                  </span>
+                </a>
+
+                <a href="https://www.credly.com/badges/7ad8c94a-7469-4c0b-9bdc-6712bc5dfd1e/public_url" target="_blank" rel="noopener noreferrer" class="badge-card">
+                  <div class="badge-card__reveal-mask">
+                    <div class="badge-card__cover"></div>
+                  </div>
+                  <div class="badge-card__reveal-content">
+                    <img class="badge-card__img" src="images/fortinet-nse-3-certified-in-cybersecurity.1.png" width="200" height="200"/>
+                    <p class="badge-card__title">Fortinet Certified NS3</p>
+                    <p class="badge-card__subtitle">Cybersecurity</p>
+                  </div>
+                  <span class="badge-card__tap-hint" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+                  </span>
+                </a>
+
+                <a href="https://www.credly.com/badges/7d6e7e04-b8b8-492d-920a-3d93eb4a2b36/public_url" target="_blank" rel="noopener noreferrer" class="badge-card">
+                  <div class="badge-card__reveal-mask">
+                    <div class="badge-card__cover"></div>
+                  </div>
+                  <div class="badge-card__reveal-content">
+                    <img class="badge-card__img" src="images/fortinet-nse-2-certified-in-cybersecurity.1.png" width="200" height="200"/>
+                    <p class="badge-card__title">Fortinet Certified NS2</p>
+                    <p class="badge-card__subtitle">Cybersecurity</p>
+                  </div>
+                  <span class="badge-card__tap-hint" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+                  </span>
+                </a>
+
+                <a href="https://www.credly.com/badges/2fc1cc38-b305-4b09-9a74-a6a0a90f08e5/public_url" target="_blank" rel="noopener noreferrer" class="badge-card">
+                  <div class="badge-card__reveal-mask">
+                    <div class="badge-card__cover"></div>
+                  </div>
+                  <div class="badge-card__reveal-content">
+                    <img class="badge-card__img" src="images/fortinet-nse-1-certified-in-cybersecurity.png" width="200" height="200"/>
+                    <p class="badge-card__title">Fortinet Certified NS1</p>
+                    <p class="badge-card__subtitle">Cybersecurity</p>
+                  </div>
+                  <span class="badge-card__tap-hint" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+                  </span>
                 </a>
               </div>
             </div>
-            <div id="posts" class="row gutter-isotope-item">
-              <div class="item branding packaging illustration col-sm-4 col-md-4 col-lg-2 isotope-mb-2 ">
-                  <a href="https://www.credly.com/badges/3c423772-790f-4dd1-b9c2-f6168947e6d8/public_url" target="_blank" class="portfolio-item isotope-item gsap-reveal-img">
-                    <img src="images/fortinet-certified-associate-cybersecurity.1.png" width="150"/>
+            <div class="insignias__group insignias__group--mongodb">
+              <h3 class="insignias__group-title gsap-reveal">MongoDB</h3>
+              <div class="insignias__grid">
+                  <a href="https://www.credly.com/badges/347d7996-cf23-4ae1-9901-9721f1e9e306/public_url" target="_blank" rel="noopener noreferrer" class="badge-card">
+                    <div class="badge-card__reveal-mask">
+                      <div class="badge-card__cover"></div>
+                    </div>
+                    <div class="badge-card__reveal-content">
+                      <img class="badge-card__img" src="images/mongoOptimization.png" width="200" height="200"/>
+                      <p class="badge-card__title">MongoDB Optimization</p>
+                      <p class="badge-card__subtitle">Skill</p>
+                    </div>
+                    <span class="badge-card__tap-hint" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+                    </span>
+                  </a>
+
+                  <a href="https://www.credly.com/badges/73984406-227f-47bc-9332-73480a44c9c5/public_url" target="_blank" rel="noopener noreferrer" class="badge-card">
+                    <div class="badge-card__reveal-mask">
+                      <div class="badge-card__cover"></div>
+                    </div>
+                    <div class="badge-card__reveal-content">
+                      <img class="badge-card__img" src="images/mongoSecurity.png" width="200" height="200"/>
+                      <p class="badge-card__title">MongoDB Security</p>
+                      <p class="badge-card__subtitle">Skill</p>
+                    </div>
+                    <span class="badge-card__tap-hint" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+                    </span>
+                  </a>
+
+                  <a href="https://www.credly.com/badges/347d7996-cf23-4ae1-9901-9721f1e9e306/public_url" target="_blank" rel="noopener noreferrer" class="badge-card">
+                    <div class="badge-card__reveal-mask">
+                      <div class="badge-card__cover"></div>
+                    </div>
+                    <div class="badge-card__reveal-content">
+                      <img class="badge-card__img" src="images/mongoCrud.png" width="200" height="200"/>
+                      <p class="badge-card__title">MongoDB CRUD Operations</p>
+                      <p class="badge-card__subtitle">Skill</p>
+                    </div>
+                    <span class="badge-card__tap-hint" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+                    </span>
+                  </a>
+
+                  <a href="https://www.credly.com/badges/d1f5c4d0-d88d-4242-824a-fa55b20477e4/public_url" target="_blank" rel="noopener noreferrer" class="badge-card">
+                    <div class="badge-card__reveal-mask">
+                      <div class="badge-card__cover"></div>
+                    </div>
+                    <div class="badge-card__reveal-content">
+                      <img class="badge-card__img" src="images/mongo_1.png" width="200" height="200"/>
+                      <p class="badge-card__title">MongoDB Relational to Document Model</p>
+                      <p class="badge-card__subtitle">Skill</p>
+                    </div>
+                    <span class="badge-card__tap-hint" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+                    </span>
                   </a>
               </div>
-              <div class="item branding packaging illustration col-sm-4 col-md-4 col-lg-2 isotope-mb-2 ">
-                <a href="https://www.credly.com/badges/03e83bc4-ed99-4a52-9691-4993a934f761/public_url" target="_blank" class="portfolio-item isotope-item gsap-reveal-img">
-                  <img src="images/fortinet-certified-fundamentals-cybersecurity.png" class="lazyload img-fluid" width="150"/>
-                </a>
-              </div>
-              <div class="item branding packaging illustration col-sm-4 col-md-4 col-lg-2 isotope-mb-2 ">
-                <a href="https://www.credly.com/badges/7b540231-7ed4-497b-b652-1d374d8b4cca/public_url" target="_blank" class="portfolio-item isotope-item gsap-reveal-img">
-                  <img src="images/fortinet-fortigate-7-6-operator.png" class="lazyload img-fluid" width="150"/>
-                </a>
-              </div>
-              <div class="item branding packaging illustration col-sm-4 col-md-4 col-lg-2 isotope-mb-2 ">
-                <a href="https://www.credly.com/badges/a24aab91-e4bc-4f9a-9e73-510ccd02cf4f/public_url" target="_blank" class="portfolio-item isotope-item gsap-reveal-img">
-                  <img src="images/technical-introduction-to-cybersecurity-3-0.png" class="lazyload img-fluid" width="150"/>
-                </a>
-              </div>
-              <div class="item branding packaging illustration col-sm-4 col-md-4 col-lg-2 isotope-mb-2 ">
-                <a href="https://www.credly.com/badges/10893d4f-7c43-43ab-aebb-0b3095e14431/public_url" target="_blank" class="portfolio-item isotope-item gsap-reveal-img">
-                  <img src="images/getting-started-in-cybersecurity-3-0.png" width="150"/>
-                </a>
-              </div>
             </div>
-            <div id="posts" class="row gutter-isotope-item">
-              <div class="item branding packaging illustration col-sm-4 col-md-4 col-lg-2 isotope-mb-2 ">
-                  <a href="https://www.credly.com/badges/347d7996-cf23-4ae1-9901-9721f1e9e306/public_url" target="_blank" class="portfolio-item isotope-item gsap-reveal-img">
-                    <img src="images/mongoOptimization.png" width="150"/>
+            <div class="insignias__group insignias__group--cisco">
+              <h3 class="insignias__group-title gsap-reveal">Cisco Networking Academy</h3>
+              <div class="insignias__grid">
+                  <a href="https://www.credly.com/badges/06415c28-7ce4-44db-bf47-a331086bb27a/public_url" target="_blank" rel="noopener noreferrer" class="badge-card">
+                    <div class="badge-card__reveal-mask">
+                      <div class="badge-card__cover"></div>
+                    </div>
+                    <div class="badge-card__reveal-content">
+                      <img class="badge-card__img" src="images/python-essentials-1.1.png" width="200" height="200"/>
+                      <p class="badge-card__title">Python Essentials 1</p>
+                      <p class="badge-card__subtitle">CISCO</p>
+                    </div>
+                    <span class="badge-card__tap-hint" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+                    </span>
+                  </a>
+
+                  <a href="https://www.credly.com/badges/9d377248-5551-438f-8771-517222bb85f0/public_url" target="_blank" rel="noopener noreferrer" class="badge-card">
+                    <div class="badge-card__reveal-mask">
+                      <div class="badge-card__cover"></div>
+                    </div>
+                    <div class="badge-card__reveal-content">
+                      <img class="badge-card__img" src="images/python-essentials-2.png" width="150"/>
+                      <p class="badge-card__title">Python Essentials 2</p>
+                      <p class="badge-card__subtitle">CISCO</p>
+                    </div>
+                    <span class="badge-card__tap-hint" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+                    </span>
+                  </a>
+
+                  <a href="https://www.credly.com/badges/5d44881e-2d0a-43b7-b07d-48293a6a0076/public_url" target="_blank" rel="noopener noreferrer" class="badge-card lazyload">
+                    <div class="badge-card__reveal-mask">
+                      <div class="badge-card__cover"></div>
+                    </div>
+                    <div class="badge-card__reveal-content">
+                      <img class="badge-card__img" src="images/javascript-essentials-1.png" width="200" height="200"/>
+                      <p class="badge-card__title">JavaScript Essentials 1</p>
+                      <p class="badge-card__subtitle">CISCO</p>
+                    </div>
+                    <span class="badge-card__tap-hint" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+                    </span>
                   </a>
               </div>
-              <div class="item branding packaging illustration col-sm-4 col-md-4 col-lg-2 isotope-mb-2 ">
-                <a href="https://www.credly.com/badges/73984406-227f-47bc-9332-73480a44c9c5/public_url" target="_blank" class="portfolio-item isotope-item gsap-reveal-img">
-                  <img src="images/mongoSecurity.png" class="lazyload img-fluid" width="150"/>
-                </a>
-              </div>
-              <div class="item branding packaging illustration col-sm-4 col-md-4 col-lg-2 isotope-mb-2 ">
-                <a href="https://www.credly.com/badges/347d7996-cf23-4ae1-9901-9721f1e9e306/public_url" target="_blank" class="portfolio-item isotope-item gsap-reveal-img">
-                  <img src="images/mongoCrud.png" class="lazyload img-fluid" width="150"/>
-                </a>
-              </div>
-              <div class="item branding packaging illustration col-sm-4 col-md-4 col-lg-2 isotope-mb-2 ">
-                <a href="https://www.credly.com/badges/d1f5c4d0-d88d-4242-824a-fa55b20477e4/public_url" target="_blank" class="portfolio-item isotope-item gsap-reveal-img">
-                  <img src="images/mongo_1.png" class="lazyload img-fluid" width="150"/>
-                </a>
-              </div>
-              <!--<div class="item branding packaging illustration col-sm-4 col-md-4 col-lg-2 isotope-mb-2 ">
-                <a href="https://www.credly.com/badges/10893d4f-7c43-43ab-aebb-0b3095e14431/public_url" target="_blank" class="portfolio-item isotope-item gsap-reveal-img">
-                  <img src="images/getting-started-in-cybersecurity-3-0.png" width="150"/>
-                </a>
-              </div> -->
-            </div>
-            <div id="posts" class="row gutter-isotope-item">
-              <div class="item branding packaging illustration col-sm-4 col-md-4 col-lg-2 isotope-mb-2 ">
-                  <a href="https://www.credly.com/badges/06415c28-7ce4-44db-bf47-a331086bb27a/public_url" target="_blank" class="portfolio-item isotope-item gsap-reveal-img">
-                    <img src="images/python-essentials-1.1.png" width="150"/>
-                  </a>
-              </div>
-              <div class="item branding packaging illustration col-sm-4 col-md-4 col-lg-2 isotope-mb-2 ">
-                <a href="https://www.credly.com/badges/9d377248-5551-438f-8771-517222bb85f0/public_url" target="_blank" class="portfolio-item isotope-item gsap-reveal-img">
-                  <img src="images/python-essentials-2.png" class="lazyload img-fluid" width="150"/>
-                </a>
-              </div>
-              <div class="item branding packaging illustration col-sm-4 col-md-4 col-lg-2 isotope-mb-2 ">
-                <a href="https://www.credly.com/badges/5d44881e-2d0a-43b7-b07d-48293a6a0076/public_url" target="_blank" class="portfolio-item isotope-item gsap-reveal-img">
-                  <img src="images/javascript-essentials-1.png" class="lazyload img-fluid" width="150"/>
-                </a>
-              </div>
-              <div class="item branding packaging illustration col-sm-4 col-md-4 col-lg-2 isotope-mb-2 ">
-                <a href="https://www.credly.com/badges/5baec4a1-8c71-40ab-847d-f9a38938fb92/public_url" target="_blank" class="portfolio-item isotope-item gsap-reveal-img">
-                  <img src="images/aws_e.png" class="lazyload img-fluid" width="150"/>
-                </a>
-              </div>
-              <!--<div class="item branding packaging illustration col-sm-4 col-md-4 col-lg-2 isotope-mb-2 ">
-                <a href="https://www.credly.com/badges/d1f5c4d0-d88d-4242-824a-fa55b20477e4/public_url" target="_blank" class="portfolio-item isotope-item gsap-reveal-img">
-                  <img src="images/mongo_1.png" width="150"/>
-                </a>
-              </div> -->
             </div>
           </div>
         </div>

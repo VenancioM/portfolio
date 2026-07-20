@@ -1213,3 +1213,238 @@ input[type="text"] {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+:root {
+  /*--bg: #0F172A;*/
+  --surface: #1E293B;
+  --border: #33415505;
+  --text: #E2E8F0;
+  --text-muted: #94A3B8;
+
+  --accent-aws: #FCA311;
+  --accent-fortinet: #C084FC;
+  --accent-mongodb: #4ADE80;
+  --accent-cisco: #38BDF8;
+}
+
+.insignias {
+  position: relative;
+  background:
+    radial-gradient(600px circle at 8% -10%, rgba(56, 189, 248, .08), transparent 60%),
+    radial-gradient(600px circle at 92% 110%, rgba(196, 132, 252, .08), transparent 60%),
+    var(--bg);
+  color: var(--text);
+  padding: 40px 20px 32px;
+  overflow: hidden;
+}
+
+.insignias__heading {
+  font-family: 'Poppins', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(22px, 4vw, 30px);
+  margin: 0 0 6px;
+}
+
+.insignias__tagline {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0 0 8px;
+}
+
+.insignias__group { margin-top: 30px; }
+.insignias__group--aws { --accent: var(--accent-aws); }
+.insignias__group--fortinet { --accent: var(--accent-fortinet); }
+.insignias__group--mongodb { --accent: var(--accent-mongodb); }
+.insignias__group--cisco { --accent: var(--accent-cisco); }
+
+.insignias__group-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Poppins', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 6px 14px 6px 10px;
+  border-radius: 999px;
+  margin: 0 0 16px;
+}
+.insignias__group-title::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.insignias__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 22px 18px;
+}
+
+.badge-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  padding: 18px 14px 14px;
+  box-shadow: 0 6px 16px -8px rgba(0, 0, 0, .5);
+  transform: rotate(var(--tilt, 0deg));
+  transition: transform .35s cubic-bezier(.34, 1.56, .64, 1), border-color .3s ease, box-shadow .3s ease;
+  /* IMPORTANTE: No usamos overflow: hidden aquí para que la cinta y el tap-hint puedan salir */
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* =========================================
+   NUEVAS CLASES PARA EL EFECTO GSAP REVEAL 
+   ========================================= */
+
+/* 1. Máscara que recorta SOLO la cortina oscura, sin afectar la cinta adhesiva */
+.badge-card__reveal-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 14px; /* 16px del padre menos los 2px del borde */
+  z-index: 9;
+  pointer-events: none; /* Evita que bloquee clics */
+}
+
+/* 2. La cortina oscura que se desplaza */
+.badge-card__cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--accent, #242424);
+  margin-left: 0; /* Inicia fuera de la máscara a la izquierda */
+}
+
+/* 3. El contenedor interno que envuelve tu contenido y empieza invisible */
+.badge-card__reveal-content {
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Mantiene la misma estructura flex que necesitabas */
+  width: 100%;
+  z-index: 1;
+}
+
+/* =========================================
+   RESTO DE TU CÓDIGO ORIGINAL 
+   ========================================= */
+
+/* Inclinación "de collage", alternada por posición dentro de cada grupo */
+.insignias__grid .badge-card:nth-child(4n+1) { --tilt: -3deg; }
+.insignias__grid .badge-card:nth-child(4n+2) { --tilt: 2deg; }
+.insignias__grid .badge-card:nth-child(4n+3) { --tilt: -1.5deg; }
+.insignias__grid .badge-card:nth-child(4n+4) { --tilt: 3deg; }
+
+/* Trocito de cinta que "pega" la insignia (Saldrá de la caja sin problemas) */
+.badge-card::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  width: 46px;
+  height: 16px;
+  background: var(--accent);
+  opacity: .55;
+  transform: translateX(-50%) rotate(-4deg);
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+}
+
+.badge-card__img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: rgba(255, 255, 255, .03);
+  border-radius: 10px;
+}
+
+.badge-card__title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text);
+}
+
+.badge-card__subtitle {
+  font-size: 12px;
+  margin: 0;
+  color: var(--text-muted);
+}
+
+/* Tap-hint (Saldrá de la caja sin problemas) */
+.badge-card__tap-hint {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, .75);
+  border: 1px solid var(--border);
+  opacity: 0;
+  transition: opacity .2s ease, background .2s ease, transform .2s ease;
+  z-index: 10;
+}
+.badge-card__tap-hint svg { width: 12px; height: 12px; stroke: var(--text); }
+
+@media (hover: hover) and (pointer: fine) {
+  .badge-card:hover,
+  .badge-card:focus-visible {
+    transform: rotate(0deg) translateY(-6px) scale(1.05);
+    border-color: var(--accent);
+    box-shadow: 0 16px 30px -10px rgba(0, 0, 0, .55), 0 0 0 3px color-mix(in srgb, var(--accent) 35%, transparent);
+  }
+  .badge-card:hover .badge-card__tap-hint,
+  .badge-card:focus-visible .badge-card__tap-hint {
+    opacity: 1;
+    background: var(--accent);
+    transform: scale(1.1);
+  }
+  .badge-card:hover .badge-card__tap-hint svg,
+  .badge-card:focus-visible .badge-card__tap-hint svg { stroke: #0F172A; }
+}
+
+@media (hover: none) {
+  .badge-card__tap-hint { opacity: .6; }
+  .badge-card:active { transform: rotate(0deg) scale(.96); }
+}
+
+.badge-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+@media (max-width: 480px) {
+  .insignias__grid .badge-card:nth-child(4n+1),
+  .insignias__grid .badge-card:nth-child(4n+2),
+  .insignias__grid .badge-card:nth-child(4n+3),
+  .insignias__grid .badge-card:nth-child(4n+4) { --tilt: -1deg; }
+  .insignias__grid { grid-template-columns: repeat(2, 1fr); gap: 16px 12px; }
+  .badge-card::before { width: 38px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .badge-card, .badge-card__tap-hint { transition: none; }
+  .badge-card:hover, .badge-card:focus-visible, .badge-card:active { transform: rotate(var(--tilt, 0deg)); }
+}

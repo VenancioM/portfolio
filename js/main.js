@@ -25,6 +25,52 @@ jQuery(function($) {
 
 });
 
+var initBadgeCardsReveal = function(controller) {
+  var badgeCards = $('.badge-card');
+
+  if ( badgeCards.length ) {
+    var j = 0;
+    
+    badgeCards.each(function() {
+      // Ahora también seleccionamos el contenedor principal (card)
+      var card = $(this),
+          cover = card.find('.badge-card__cover'),
+          revealContent = card.find('.badge-card__reveal-content'),
+          img = card.find('.badge-card__img');
+
+      var tlBadge = new TimelineMax();
+
+      setTimeout(function() {
+        
+        // 1. Hacemos visible toda la tarjeta (se verá oscura porque el cover ya la tapa)
+        tlBadge.set(card, { autoAlpha: 1 })
+          
+          // 2. Preparamos el contenido interno para que ya esté visible detrás de la cortina
+          .set(revealContent, { autoAlpha: 1 })
+          .set(img, { scale: '1.3' })
+          
+          // 3. Deslizamos la cortina hacia la derecha para revelar todo el diseño
+          .to(cover, 1, { marginLeft: '102%', ease: Expo.easeInOut })
+          
+          // 4. Restauramos el zoom de la imagen al mismo tiempo
+          .to(img, 2, { scale: '1.0', ease: Expo.easeOut }, '-=1.0');
+          
+      }, j * 200);
+
+      new ScrollMagic.Scene({
+        triggerElement: this, // Como usamos visibility: hidden, ScrollMagic aún puede calcular bien cuándo aparecemos
+        duration: "0%",
+        reverse: false,
+        offset: "-100%", 
+      })
+      .setTween(tlBadge)
+      .addTo(controller);
+
+      j++;
+    });
+  }
+};
+
 var siteIstotope = function() {
 	var $container = $('#posts').isotope({
     itemSelector : '.item',
@@ -100,6 +146,7 @@ var siteIstotope = function() {
 
 			});
 		}
+		initBadgeCardsReveal(controller);
   })
 
   $('.js-filter').on('click', function(e) {
